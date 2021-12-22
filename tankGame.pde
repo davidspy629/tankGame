@@ -8,7 +8,7 @@ char[] keyButtons = {'q', 'l', 'a', 'y', 'p', 'm', 'j', 'k', 'i', 'j',
 int[] playerColours = {0, 255, 30, 230, 60, 200, 90, 170, 120, 140, 100, 
   110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 
   250, 260}; //Kann genutzt werden um Teams zu erstellen
-int playerNumber = 4; //max 8 (für mehr die oberen zwei Listen entfernen)
+int playerNumber = 8; //max 8 (für mehr die oberen zwei Listen entfernen)
 int[] points = new int[playerNumber];
 int timerWinner = 0;
 int winPoints = 4; //Punkte um zu gewinnen
@@ -157,7 +157,7 @@ void draw() {
       }
     }
     //Schießt den nähesten Spieler ab, und auch in die entgegengesetzte Richtung
-    if (frameCount % 10 == 0) {
+    if (frameCount % 60 == 0) {
       machine.shoot(radians(getAngle(machine.xAxis, machine.yAxis, xAxisPlayer, yAxisPlayer)));
       machine.shoot(radians(getAngle(machine.xAxis, machine.yAxis, xAxisPlayer, yAxisPlayer))+PI);
     }
