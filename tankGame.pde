@@ -2,9 +2,7 @@ PFont mono;
 float playerSize = 35;
 int border = 25;
 float speed = playerSize/12; //Schussgeschwindigkeit = 3*speed
-char[] keyButtons = {'q', 'l', 'a', 'y', 'p', 'm', 'j', 'k', 'i', 'j', 
-  'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
-  'u', 'v', 'w', 'x', 'y', 'z'}; //KANN genutzt werden um die Tasten anzugeben
+char[] keyButtons = {'q', 'm', 'y', 'p', 'a', 'l', 'c', 'm'}; //KANN genutzt werden um die Tasten anzugeben
 int[] playerColours = {0, 255, 30, 230, 60, 200, 90, 170, 120, 140, 100, 
   110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 
   250, 260}; //Kann genutzt werden um Teams zu erstellen
@@ -53,9 +51,7 @@ void setup() {
   powerUps.add(new PowerUp(width/2, height-100, 180, 60, "icons/rainbowShield.png", "shield"));
   powerUps.add(new PowerUp(width/2, 100, 180, 60, "icons/checkpointMachine.png", "machine"));
   //Maschinen
-  for (int i = 0; i < width; i += 10) {
-    machines.add(new Machine(i, height/2, randomPlayerColor(), 60));
-  }
+  machines.add(new Machine(width/2, height/2, randomPlayerColor(), 60));
 }
 
 void draw() {
@@ -157,7 +153,7 @@ void draw() {
       }
     }
     //Schießt den nähesten Spieler ab, und auch in die entgegengesetzte Richtung
-    if (frameCount % 60 == 0) {
+    if (frameCount % 120 == 0) {
       machine.shoot(radians(getAngle(machine.xAxis, machine.yAxis, xAxisPlayer, yAxisPlayer)));
       machine.shoot(radians(getAngle(machine.xAxis, machine.yAxis, xAxisPlayer, yAxisPlayer))+PI);
     }
