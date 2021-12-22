@@ -2,7 +2,7 @@ PFont mono;
 float playerSize = 35;
 int border = 25;
 float speed = playerSize/12; //Schussgeschwindigkeit = 3*speed
-char[] keyButtons = {'q', 'm', 'y', 'p', 'a', 'l', 'c', 'm'}; //KANN genutzt werden um die Tasten anzugeben
+char[] keyButtons = {'q', 'm', 'y', 'p', 'a', 'l', 'c', 'b'}; //KANN genutzt werden um die Tasten anzugeben
 int[] playerColours = {0, 255, 30, 230, 60, 200, 90, 170, 120, 140, 100, 
   110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 
   250, 260}; //Kann genutzt werden um Teams zu erstellen
