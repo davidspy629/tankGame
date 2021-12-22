@@ -1,1 +1,1 @@
-Credit to https://github.com/LordAliander, for the creating the icons.
+Credit to https://github.com/LordAliander, for creating the icons.
