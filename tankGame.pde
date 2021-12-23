@@ -6,7 +6,7 @@ char[] keyButtons = {'q', 'm', 'y', 'p', 'a', 'l', 'c', 'b'}; //KANN genutzt wer
 int[] playerColours = {0, 255, 30, 230, 60, 200, 90, 170, 120, 140, 100, 
   110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 
   250, 260}; //Kann genutzt werden um Teams zu erstellen
-int playerNumber = 8; //max 8 (für mehr die oberen zwei Listen entfernen)
+int playerNumber = 2; //max 8 (für mehr die oberen zwei Listen entfernen)
 int[] points = new int[playerNumber];
 int timerWinner = 0;
 int winPoints = 4; //Punkte um zu gewinnen
@@ -203,6 +203,7 @@ void draw() {
     catch(IndexOutOfBoundsException e) {
       fill(0);
     }
+    shots.clear();
     textSize(100);
     textAlign(CENTER);
     timerWinner++;
